@@ -1,0 +1,98 @@
+def print_bogdan():
+    print("bogdan")
+    print("TMTA12")
+    cuvant = "Soare"
+    print(cuvant)
+
+
+print_bogdan()
+print("finish functie")
+
+def print_an_curent():
+    print("2024")
+
+
+print_bogdan()
+
+for i in range(30):
+    print_an_curent()
+
+def calcul_suma():
+    pass
+    '''numar_a = input("Introduceti un numar: ")
+    numar_b = input("Introduceti alt numar: ")
+    print(int(numar_a) + int(numar_b))'''
+
+calcul_suma()
+
+# functii cu parametri args
+
+def suma_numere_args(*args):
+    suma = 0
+    for number in args:
+        suma += number
+    return suma
+
+suma_numere_args(1,2,3,4)
+suma = suma_numere_args(1,2,3,4)
+print(f"Suma numerelor {suma}")
+
+def concatenare_stringuri(*args):
+    string = ""
+    for cuvant in args:
+        string += cuvant
+    #print(f"Concatenare {string}")
+    return string
+
+variabila_funtie = concatenare_stringuri("ana", " are", " mere")
+print(f"Variabila functie {variabila_funtie}")
+
+# exemplu functie cu parametri expliciti
+def suma_doua_numere(numar_a, numar_b):
+    suma = numar_a + numar_b
+    return suma
+
+print(suma_doua_numere(0, 3))
+print(suma_doua_numere(-1, 10))
+print(suma_doua_numere(141, 32))
+
+def calcul_salariu_marire(salariu=1000, bonus=100):
+    return salariu + bonus
+
+# apelam cu valoarea default pt bonus si salariul il dam explicit
+print(calcul_salariu_marire(2000))
+# aici apelam cu ambii parametri expliciti
+print(calcul_salariu_marire(1000, 300))
+# aici apelam cu bonus explicit si salariu default
+print(calcul_salariu_marire(bonus=400, salariu=1500))
+
+def e_major(major=True):
+    if major:
+        print("E major")
+    else:
+        print("Nu e major")
+
+e_major()
+e_major(False)
+e_major(major=False)
+
+def find_upper(*args):
+    for char in args:
+        if char.isupper():
+            return char
+        else:
+            print(f"{char} nu este majusucula")
+
+print(f"primul caracter majuscula este {find_upper('a','b','c','E','f')}")
+
+
+# functii cu kwargs
+def print_dictionar(**kwargs):
+    for key, value in kwargs.items():
+        print(f"Pt cheia {key} avem valoarea {value}")
+
+print_dictionar(**{"nume":"bogdan", "prenume":"brinzei"})
+
+#try except part
+
+numar_a = input("Introduceti un nr: ")
