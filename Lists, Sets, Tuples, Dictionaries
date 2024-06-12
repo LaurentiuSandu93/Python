@@ -33,7 +33,17 @@ if lista_definita.count("mere") > 0:
     print("Trebuie sa cumperi mere de la supermarket")
 else:
     print("Nu trebuie sa cumperi mere")
-
+lista = ["Ana", "are", "mere"]
+for cuvant in lista:
+    print(cuvant)
+print("am terminat")
+def numar_par(numar_de_test):
+    if numar_de_test % 2 == 0:
+        return True
+    else:
+        return False
+print(numar_par(13))
+print(numar_par(8))
 
 print("--------SETURI------")
 set_definit = {"Ana", "are", 3,3,3,3,3,3,3, "mere", True}
