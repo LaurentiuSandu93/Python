@@ -1,0 +1,100 @@
+print("-----------LISTE--------")
+lista_definita = ["Ana", "are", 3, "mere", True, ["1", "2"]]
+print(lista_definita)
+print(len(lista_definita))
+# accesam elementul din lista de pe pozitia 3
+print(lista_definita[3])
+# adaugam un element
+lista_definita.append("capsuni")
+print(lista_definita)
+# eleminam ultimul element
+lista_definita.pop()
+print(lista_definita)
+# adaugam element pe o pozitie
+lista_definita.insert(3, "capsuni")
+print(lista_definita)
+lista_definita.remove("capsuni")
+print(lista_definita)
+
+# vedem pe ce index se afla o anumita valoare
+print(lista_definita.index("mere"))
+print(lista_definita.index(True))
+
+# aflam de cate ori se afla un element in lista
+print(lista_definita.count("Ana"))
+
+#ca sa concatenam, sa adunam
+lista_1 = ["ana", "are", "mere"]
+lista_2 = ["pere", "capsuni"]
+lista_1.extend(lista_2)
+print(lista_1)
+
+if lista_definita.count("mere") > 0:
+    print("Trebuie sa cumperi mere de la supermarket")
+else:
+    print("Nu trebuie sa cumperi mere")
+
+
+print("--------SETURI------")
+set_definit = {"Ana", "are", 3,3,3,3,3,3,3, "mere", True}
+print(set_definit)
+print(len(set_definit))
+# stergem un element aleatoriu din set
+set_definit.pop()
+print(set_definit)
+# stergem un element cu metoda remove
+set_definit.remove("mere")
+print(set_definit)
+
+
+print("--------TUPLURI-------")
+tuplu_definit = ("Ana", "are", 3,3,3,3,3,3, "mere", True)
+print(tuplu_definit)
+# accesare element pe baza de index
+print(tuplu_definit[1])
+print(len(tuplu_definit))
+# de cate ori se afla elementul 3 in tuplul nostru
+print(tuplu_definit.count(3))
+
+#de cele mai multe ori o sa il regasim sub forma aceasta
+tuplu_euro = ("euro", 5.02)
+tuplu_dolar = ("dolar", 4.92)
+print(tuplu_euro)
+print(tuplu_dolar)
+
+tuplu_rezultat = tuplu_euro + tuplu_dolar
+print(tuplu_rezultat)
+
+
+print("-------DICTIONARE--------")
+
+dictionar_definit = {
+    "nume":"Laurentiu",
+    "prenume":"Sandu",
+    "varsta":30,
+    "cnp": 30,
+    "barbat":True,
+    "fructe_preferate": ["mere", "pere"],
+    "limbaje_programare": {"python", "java"},
+    "adresa": {
+        "nume": "acasa",
+        "strada": "virtutii",
+        "nr_strada": 25,
+        "oras": {
+            "nume": "botosani",
+            "judet": "botosani"
+        },
+        "tara": "romania"
+    },
+    "ochi": "albastri",
+    "inaltime": 1.82
+}
+
+print(dictionar_definit)
+#ca sa vedem care sunt toate cheile din dictionar
+print(dictionar_definit.keys())
+#ca sa vedem toate valorile din dictionar
+print(dictionar_definit.values())
+
+# accesare valoare de la o anumita cheie
+print(dictionar_definit.get("nume"))
