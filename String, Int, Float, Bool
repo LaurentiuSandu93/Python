@@ -1,0 +1,63 @@
+### Code Snippets with Explanations
+
+# Variables
+grupa_testare = 'hello tmta'
+Grupa_testare = 'false'
+print(grupa_testare)
+
+# Numeric string 
+grupa_testare = "23213"
+print(grupa_testare)
+
+# Integer 
+varsta_bogdan = 30
+print(varsta_bogdan)
+
+# Float value 
+salariu = 3000.50
+print(salariu)
+
+# Sets e_baiat to a boolean value True and prints it
+e_baiat = True
+print(e_baiat)
+
+# Prints the data types of varsta_bogdan and e_baiat
+print(type(varsta_bogdan))
+print(type(e_baiat))
+
+# Converts variabila_1 from string to integer and prints its type before and after conversion
+variabila_1 = "10"
+print(type(variabila_1))
+print(int(variabila_1))
+print(type(int(variabila_1)))
+variabila_1 = int(variabila_1)
+print(type(variabila_1))
+
+# Converts boolean values variabila_2 and variabila_3 to integers and prints them
+variabila_2 = True
+print(int(variabila_2))
+variabila_3 = False
+print(int(variabila_3))
+
+# Adds two integers and prints the result
+variabila_4 = 20
+variabila_5 = 60
+print(variabila_4 + variabila_5)
+
+# Concatenates and prints a sentence using type casting
+nume = "Bogdan"
+varsta = 30
+baiat = True
+print(nume + " este numele meu si am varsta de " + str(varsta) + " de ani si sunt baiat " + str(baiat))
+
+# Concatenates and prints a sentence using string formatting
+print(f"{nume} este numele meu si am varsta de {varsta} de ani si sunt baiat {baiat}")
+
+# Prompts the user for inputs and prints the input for the current month
+print(input("Te rog introdu luna in care suntem: "))
+nume = input("Te rog zi-mi cum te cheama: ")
+varsta = input("Te rog zi-mi ce varsta ai: ")
+
+# Prints the user-provided nume and varsta
+print(nume)
+print(varsta)
