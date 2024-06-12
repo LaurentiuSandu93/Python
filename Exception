@@ -1,0 +1,30 @@
+nr_a = input("Introduceti un nr: ")
+nr_b = input("Introduceti alt numar: ")
+
+def convert_nr_a_to_int(nr_de_test_a):
+    try:
+        return int(nr_de_test_a)
+    except:
+        raise Exception("Primul nr nu este convertibil")
+
+def convert_nr_b_to_int(nr_de_test_b):
+    try:
+        return int(nr_de_test_b)
+    except:
+        raise Exception("Al doilea nr nu este convertibil")
+
+def suma(a, b):
+    return a + b
+
+
+try:
+    a = convert_nr_a_to_int(nr_a)
+    b = convert_nr_b_to_int(nr_b)
+    print(suma(a,b))
+except Exception as e:
+    if str(e) == "Primul nr nu este convertibil":
+        print("Vezi ca primul nr nu e bun")
+    elif str(e) == "Al doilea nr nu este convertibil":
+        print("Al doilea nr nu e bun")
+    else:
+        print("Eroare generala")
