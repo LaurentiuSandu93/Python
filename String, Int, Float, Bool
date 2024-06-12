@@ -17,15 +17,11 @@ print(varsta_bogdan)
 salariu = 3000.50
 print(salariu)
 
-# Sets e_baiat to a boolean value True and prints it
+# Boolean value 
 e_baiat = True
 print(e_baiat)
 
-# Prints the data types of varsta_bogdan and e_baiat
-print(type(varsta_bogdan))
-print(type(e_baiat))
-
-# Converts variabila_1 from string to integer and prints its type before and after conversion
+# Converts variabilfrom string to integer 
 variabila_1 = "10"
 print(type(variabila_1))
 print(int(variabila_1))
@@ -33,13 +29,13 @@ print(type(int(variabila_1)))
 variabila_1 = int(variabila_1)
 print(type(variabila_1))
 
-# Converts boolean values variabila_2 and variabila_3 to integers and prints them
+# Converts boolean values to integers
 variabila_2 = True
 print(int(variabila_2))
 variabila_3 = False
 print(int(variabila_3))
 
-# Adds two integers and prints the result
+# Integers
 variabila_4 = 20
 variabila_5 = 60
 print(variabila_4 + variabila_5)
@@ -53,7 +49,7 @@ print(nume + " este numele meu si am varsta de " + str(varsta) + " de ani si sun
 # Concatenates and prints a sentence using string formatting
 print(f"{nume} este numele meu si am varsta de {varsta} de ani si sunt baiat {baiat}")
 
-# Prompts the user for inputs and prints the input for the current month
+# Prompts the user for inputs 
 print(input("Te rog introdu luna in care suntem: "))
 nume = input("Te rog zi-mi cum te cheama: ")
 varsta = input("Te rog zi-mi ce varsta ai: ")
