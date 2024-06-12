@@ -129,3 +129,62 @@ lista_spitale = [spital_botosani, spital_bucuresti, spital_targu_mures, Spital("
 for current_spital in lista_spitale:
     print_detalii_spital(current_spital)
     print(current_spital.e_de_urgenta())
+----------------------------------------------------------------------------------------------------------
+# mostenire
+
+class Animal:
+
+    nr_picioare = None
+    carnivor = None
+
+    def voce(self):
+        print("miau")
+
+    def prezentare_animal(self):
+        print(f"[BINE ATI VENIT LA GRADINA ZOO]NR Picioare {self.nr_picioare} este canivor {self.carnivor}")
+
+class Pisica(Animal):
+    pass
+
+class Caine(Animal):
+
+    def __init__(self, given_nr_picioare, given_carnivor):
+        self.nr_picioare = given_nr_picioare
+        self.carnivor = given_carnivor
+
+    def voce(self):
+        print("ham")
+
+pisica_1 = Pisica()
+pisica_1.voce()
+
+caine_1 = Caine(4, True)
+caine_1.voce()
+-----------------------------------------------------------------------------------
+from abc import abstractmethod, ABC
+
+class Gradinita(ABC):
+
+    @abstractmethod
+    def joaca(self):
+        raise NotImplementedError
+
+    def somn(self):
+        pass
+
+    @abstractmethod
+    def activitati(self):
+        pass
+
+class Gradinita_privata(Gradinita):
+
+    nr_copii = 0
+    adresa = None
+
+    def joaca(self):
+        print("ma joc la gradinita pivata")
+
+    def activitati(self):
+        print("activitati la gradinita privata")
+
+gradinita_pivata1 = Gradinita_privata()
