@@ -1,0 +1,52 @@
+text = "Ana are mere"
+text = "Ana are mere si pere"
+print(text[8:12:1])
+
+print(text[2:3:1])
+print(text[19])
+print(text[-2])
+
+
+text = "Astazi este miercuri 27 martie 2024 ora"
+var1 = text[0:6:1]
+
+text_mare = "Ana are mere si pere in panere"
+# exemplu replace
+print(text_mare.replace("mere", "struguri"))
+print(text_mare.replace("a", "A"))
+print(text_mare.replace(" ", ""))
+print(text_mare.replace("re", "ZY"))
+
+# exemplu upper
+print(text_mare.upper())
+print(text_mare.lower())
+
+#exemplu index
+convorbire = "bogdan ..dqwkpdqpwdopkqwdqwidjqwijdqbombapiowkdpoqwkdqwopkdqwkodqwpokdqbomba"
+print(convorbire.index("bomba"))
+
+#exemplu isLower
+print(text_mare.islower())
+#exemplu capitalize
+print(convorbire.capitalize())
+#exemplu isNumeric
+text = "2024"
+print(text.isnumeric())
+
+#count si len
+print(convorbire.count("bo"))
+print(len(convorbire))
+
+#SPLIT
+text = "Ana are mere si pere"
+print(text.split(" "))
+#avem declarata o lista
+lista_cuvinte = text.split(" ")
+#avem declarate variabile de tip string luate din lista de mai sus
+primul_cuvant_din_lista = lista_cuvinte[0]
+al_doilea_cuvant = lista_cuvinte[1]
+al_trilea_cuvant = lista_cuvinte[2]
+
+print(primul_cuvant_din_lista)
+print(al_doilea_cuvant)
+print(al_trilea_cuvant)
