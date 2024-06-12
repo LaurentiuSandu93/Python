@@ -10,8 +10,8 @@ grupa_testare = "23213"
 print(grupa_testare)
 
 # Integer 
-varsta_bogdan = 30
-print(varsta_bogdan)
+varsta_laur = 30
+print(varsta_laur)
 
 # Float value 
 salariu = 3000.50
