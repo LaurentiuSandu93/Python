@@ -1,0 +1,131 @@
+class Fiinta:
+
+    nume = None
+    prenume = None
+    cnp = None
+    sex = None
+
+    def naste(self):
+        if self.sex == "F":
+            return True
+        elif self.sex == "M":
+            return False
+        else:
+            return False
+
+    def afiseaza_detalii(self):
+       return f"{self.nume} {self.prenume} {self.cnp} {self.sex}"
+
+def print_hello():
+    print("hello")
+
+obiect_bogdan = Fiinta()
+obiect_lavinia = Fiinta()
+obiect_george = Fiinta()
+
+obiect_bogdan.nume = "bogdan"
+obiect_bogdan.cnp = "194"
+obiect_bogdan.sex = "M"
+
+obiect_lavinia.nume = "lavinia"
+obiect_lavinia.cnp = "194"
+obiect_lavinia.sex = "F"
+
+print(obiect_bogdan.nume)
+print(obiect_bogdan.cnp)
+print(obiect_bogdan.sex)
+print(f"Obiectul {obiect_bogdan.nume} poate naste? {obiect_bogdan.naste()}")
+
+# print(obiect_lavinia.nume)
+# print(obiect_lavinia.cnp)
+# print(obiect_lavinia.sex)
+print(obiect_lavinia.afiseaza_detalii())
+print(f"Obiectul {obiect_lavinia.nume} poate naste? {obiect_lavinia.naste()}")
+
+print_hello()
+
+---------------------------------------------------------------------------------------------------------------------
+class Spital:
+
+    nume = None
+    adresa = None
+    capacitate = None
+    heliport = False
+    rampa = None
+
+    def e_de_urgenta(self):
+        if self.capacitate >= 1000:
+            return True
+        else:
+            return False
+
+    def are_easy_transfer(self):
+        '''if self.heliport:
+            return True
+        else:
+            return False'''
+        return self.heliport
+
+    # setter
+    def actualizare_capacitate(self, noua_capacitate):
+        self.capacitate = noua_capacitate
+
+    # constructor explicit
+    def __init__(self, given_name, given_adresa, given_capacitate, given_heliport):
+        self.nume = given_name
+        self.adresa = given_adresa
+        self.capacitate = given_capacitate
+        self.heliport = given_heliport
+        # A AND B OR C
+        # WRONG!!!!! A AND (B OR C)
+        # RIGHT!!!!! (A AND B) OR C
+
+        # A AND B OR C AND D
+        # (A AND B) OR (C AND D)
+        self.rampa = self.e_de_urgenta() and self.are_easy_transfer() or self.capacitate >= 300
+
+
+spital_botosani = Spital(
+    "spitalul municipal",
+    "strada 1",
+    500,
+    False
+)
+spital_targu_mures = Spital(
+    "oncologic",
+    "strada 2",
+    1000,
+    True
+)
+spital_bucuresti = Spital(
+    "universitar",
+    "splaiul unirii",
+    2000,
+    True
+)
+
+#actulizare capacitate direct prin atribut
+spital_bucuresti.capacitate = 2500
+#actulizare capacitate cu metoda
+spital_bucuresti.actualizare_capacitate(2600)
+
+print(spital_botosani.nume)
+print(spital_botosani.capacitate)
+print(spital_botosani.adresa)
+
+print(spital_targu_mures.nume)
+print(spital_targu_mures.capacitate)
+print(spital_targu_mures.adresa)
+
+def print_detalii_spital(spital):
+    print(f"{spital.nume} este de urgenta: {spital.e_de_urgenta()} are adresa {spital.adresa} si o capacitate de {spital.capacitate} rampa: {spital.rampa}")
+
+#print_detalii_spital(spital_botosani)
+#print_detalii_spital(spital_targu_mures)
+#print_detalii_spital(spital_bucuresti)
+
+lista_spitale = [spital_botosani, spital_bucuresti, spital_targu_mures, Spital("craiova", "21", 501, False)]
+
+for current_spital in lista_spitale:
+    print_detalii_spital(current_spital)
+    print(current_spital.e_de_urgenta())
